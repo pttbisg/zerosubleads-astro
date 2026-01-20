@@ -1,0 +1,210 @@
+---
+import { Icon } from 'astro-icon/components';
+import Button from './Button.astro';
+
+const leads = [
+  {
+    name: 'Sarah Jenkins',
+    title: 'VP of Sales',
+    company: 'Acme SaaS',
+    loc: 'Austin, TX',
+    avatar: 'https://i.pravatar.cc/150?u=sarah'
+  },
+  {
+    name: 'David Chen',
+    title: 'Head of Sales',
+    company: 'TechFlow',
+    loc: 'Austin, TX',
+    avatar: 'https://i.pravatar.cc/150?u=david'
+  },
+  {
+    name: 'Emily Ross',
+    title: 'VP, Enterprise Sales',
+    company: 'DataScale',
+    loc: 'Austin, TX',
+    avatar: 'https://i.pravatar.cc/150?u=emily'
+  },
+  {
+    name: 'Marcus Thorne',
+    title: 'Director of Sales',
+    company: 'Nebula Inc.',
+    loc: 'Austin, TX',
+    avatar: 'https://i.pravatar.cc/150?u=marcus'
+  },
+];
+---
+
+<section class="relative overflow-hidden pt-16 pb-20 lg:pt-24 lg:pb-28 grid-bg">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center relative z-10">
+    <h1 class="mx-auto max-w-4xl text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl mb-6">
+      LinkedIn leads. Pay per lead. <br class="hidden sm:block" />
+      <span class="text-primary-600">No subscription.</span>
+    </h1>
+
+    <!-- Hero Description with Pill -->
+    <p class="mx-auto max-w-3xl text-xl text-gray-600 mb-10 leading-relaxed">
+      Describe who you're looking for in plain English—including <span class="inline-flex items-center rounded-full bg-primary-100/50 px-3 py-1 text-base font-medium text-primary-700 ring-1 ring-inset ring-primary-600/20 align-middle mx-1 whitespace-nowrap"><Icon name="lucide:file-text" class="w-4 h-4 mr-1.5 opacity-70" />keywords in their bio</span>. Get LinkedIn profiles + verified emails.
+    </p>
+
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+      <!-- Updated Primary Button -->
+      <Button variant="primary" size="lg" class="w-full sm:w-auto h-auto py-2.5 px-8">
+        <div class="flex flex-col items-center">
+          <span class="font-bold text-lg leading-tight">Start searching</span>
+          <span class="text-[11px] text-gray-300 font-normal leading-tight mt-0.5">Only pay for what you pull</span>
+        </div>
+      </Button>
+      <Button variant="outline" size="lg" class="w-full sm:w-auto">
+        View pricing
+      </Button>
+    </div>
+
+    <!-- Simulated Product UI -->
+    <div class="mx-auto max-w-5xl rounded-2xl bg-white p-4 shadow-2xl ring-1 ring-gray-900/10 sm:p-6 lg:p-8">
+      <!-- Search Bar -->
+      <div class="relative mb-4">
+        <div class="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none">
+          <Icon name="lucide:search" class="h-5 w-5 text-gray-400" />
+        </div>
+        <div class="block w-full rounded-xl border-0 py-4 pl-12 pr-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-lg bg-gray-50 font-mono">
+          VP of Sales at Series A SaaS companies in Austin mentioning "PLG" in bio
+        </div>
+      </div>
+
+      <!-- Filters Row -->
+      <div class="flex flex-wrap items-center gap-2 mb-6">
+        <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider mr-1">Active Filters:</span>
+
+        <div class="inline-flex items-center gap-1.5 rounded-md bg-white px-2.5 py-1.5 text-xs font-medium text-gray-700 border border-gray-200 shadow-sm hover:bg-gray-50 transition-colors cursor-pointer group">
+            <Icon name="lucide:briefcase" class="h-3.5 w-3.5 text-gray-400 group-hover:text-gray-500" />
+            <span class="text-gray-500">Title:</span>
+            <span class="font-semibold text-gray-900">VP of Sales</span>
+            <button class="ml-1 text-gray-300 hover:text-gray-500 rounded-sm focus:outline-none focus:ring-2 focus:ring-primary-500">
+              <Icon name="lucide:x" class="h-3 w-3" />
+            </button>
+        </div>
+
+        <div class="inline-flex items-center gap-1.5 rounded-md bg-white px-2.5 py-1.5 text-xs font-medium text-gray-700 border border-gray-200 shadow-sm hover:bg-gray-50 transition-colors cursor-pointer group">
+            <Icon name="lucide:building-2" class="h-3.5 w-3.5 text-gray-400 group-hover:text-gray-500" />
+            <span class="text-gray-500">Industry:</span>
+            <span class="font-semibold text-gray-900">SaaS</span>
+            <button class="ml-1 text-gray-300 hover:text-gray-500 rounded-sm focus:outline-none focus:ring-2 focus:ring-primary-500">
+              <Icon name="lucide:x" class="h-3 w-3" />
+            </button>
+        </div>
+
+        <div class="inline-flex items-center gap-1.5 rounded-md bg-white px-2.5 py-1.5 text-xs font-medium text-gray-700 border border-gray-200 shadow-sm hover:bg-gray-50 transition-colors cursor-pointer group">
+            <Icon name="lucide:trending-up" class="h-3.5 w-3.5 text-gray-400 group-hover:text-gray-500" />
+            <span class="text-gray-500">Stage:</span>
+            <span class="font-semibold text-gray-900">Series A</span>
+            <button class="ml-1 text-gray-300 hover:text-gray-500 rounded-sm focus:outline-none focus:ring-2 focus:ring-primary-500">
+              <Icon name="lucide:x" class="h-3 w-3" />
+            </button>
+        </div>
+
+        <div class="inline-flex items-center gap-1.5 rounded-md bg-white px-2.5 py-1.5 text-xs font-medium text-gray-700 border border-gray-200 shadow-sm hover:bg-gray-50 transition-colors cursor-pointer group">
+            <Icon name="lucide:map-pin" class="h-3.5 w-3.5 text-gray-400 group-hover:text-gray-500" />
+            <span class="text-gray-500">Location:</span>
+            <span class="font-semibold text-gray-900">Austin, TX</span>
+            <button class="ml-1 text-gray-300 hover:text-gray-500 rounded-sm focus:outline-none focus:ring-2 focus:ring-primary-500">
+              <Icon name="lucide:x" class="h-3 w-3" />
+            </button>
+        </div>
+
+        <div class="inline-flex items-center gap-1.5 rounded-md bg-blue-50/50 px-2.5 py-1.5 text-xs font-medium text-gray-700 border border-blue-100 shadow-sm hover:bg-blue-50 transition-colors cursor-pointer group">
+            <Icon name="lucide:file-text" class="h-3.5 w-3.5 text-blue-500 group-hover:text-blue-600" />
+            <span class="text-gray-500">Bio Keywords:</span>
+            <span class="font-semibold text-gray-900">PLG</span>
+            <button class="ml-1 text-blue-300 hover:text-blue-500 rounded-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <Icon name="lucide:x" class="h-3 w-3" />
+            </button>
+        </div>
+
+        <button class="text-xs font-medium text-primary-600 hover:text-primary-700 ml-2 border border-dashed border-primary-200 bg-primary-50 px-2.5 py-1.5 rounded-md hover:bg-primary-100 transition-colors">
+            + Add filter
+        </button>
+      </div>
+
+      <!-- Table Grid View -->
+      <div class="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
+        <div class="overflow-x-auto">
+          <table class="min-w-full divide-y divide-gray-200">
+            <thead>
+              <tr class="bg-gray-50/50">
+                <th scope="col" class="py-3.5 pl-4 pr-3 sm:pl-6 w-12">
+                  <div class="flex items-center">
+                     <input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-primary-600 focus:ring-primary-600" />
+                  </div>
+                </th>
+                <th scope="col" class="py-3.5 pl-2 pr-3 text-left text-xs font-semibold uppercase tracking-wide text-gray-500">
+                  Lead Name
+                </th>
+                <th scope="col" class="px-3 py-3.5 text-left text-xs font-semibold uppercase tracking-wide text-gray-500">
+                  Title
+                </th>
+                <th scope="col" class="px-3 py-3.5 text-left text-xs font-semibold uppercase tracking-wide text-gray-500">
+                  Company
+                </th>
+                <th scope="col" class="px-3 py-3.5 text-right text-xs font-semibold uppercase tracking-wide text-gray-500">
+                  Actions
+                </th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200 bg-white">
+              {leads.map((lead) => (
+                <tr class="hover:bg-gray-50/80 transition-colors group">
+                  <td class="py-4 pl-4 pr-3 sm:pl-6">
+                    <div class="flex items-center">
+                       <input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-primary-600 focus:ring-primary-600" />
+                    </div>
+                  </td>
+                  <td class="whitespace-nowrap py-4 pl-2 pr-3 text-sm">
+                    <div class="flex items-center">
+                      <div class="h-10 w-10 flex-shrink-0">
+                        <img
+                          class="h-10 w-10 rounded-full border border-gray-200 object-cover"
+                          src={lead.avatar}
+                          alt={lead.name}
+                        />
+                      </div>
+                      <div class="ml-4">
+                        <div class="font-medium text-gray-900">{lead.name}</div>
+                        <div class="text-gray-500 text-xs">{lead.loc}</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-600">
+                    {lead.title}
+                  </td>
+                  <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-600">
+                    {lead.company}
+                  </td>
+                  <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500 text-right">
+                    <div class="flex justify-end items-center gap-3">
+                      <button class="flex h-8 w-8 items-center justify-center rounded bg-[#0077b5] text-white hover:bg-[#006097] transition-colors" title="View LinkedIn Profile">
+                        <Icon name="lucide:linkedin" class="h-4 w-4 fill-current" />
+                      </button>
+                      <button class="flex items-center gap-2 rounded-md bg-white px-3 py-1.5 text-xs font-medium text-gray-700 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 transition-colors">
+                        <Icon name="lucide:mail" class="h-3.5 w-3.5 text-gray-400" />
+                        Show Email
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <!-- Pagination / Footer of table -->
+        <div class="border-t border-gray-200 bg-gray-50 px-4 py-3 sm:px-6">
+          <div class="flex items-center justify-between text-xs text-gray-500">
+            <span>Showing 1-4 of 124 results</span>
+            <div class="flex gap-2">
+               <div class="h-2 w-16 bg-gray-200 rounded-full"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

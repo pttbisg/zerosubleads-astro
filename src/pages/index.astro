@@ -1,16 +1,32 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/react/Navbar';
+import Solution from '../components/react/Solution';
+import Hero from '../components/astro/Hero.astro';
+import Problem from '../components/astro/Problem.astro';
+import HowItWorks from '../components/astro/HowItWorks.astro';
+import WhoItsFor from '../components/astro/WhoItsFor.astro';
+import Comparison from '../components/astro/Comparison.astro';
+import Pricing from '../components/astro/Pricing.astro';
+import Testimonials from '../components/astro/Testimonials.astro';
+import FAQ from '../components/astro/FAQ.astro';
+import FinalCTA from '../components/astro/FinalCTA.astro';
+import Footer from '../components/astro/Footer.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="ZeroSubLeads - Pay per LinkedIn lead. No subscription.">
+  <Navbar client:load />
+  <main>
+    <Hero />
+    <Problem />
+    <Solution client:visible />
+    <HowItWorks />
+    <WhoItsFor />
+    <Comparison />
+    <Pricing />
+    <Testimonials />
+    <FAQ />
+    <FinalCTA />
+  </main>
+  <Footer />
+</BaseLayout>

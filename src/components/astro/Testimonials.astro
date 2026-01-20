@@ -1,0 +1,46 @@
+---
+const testimonials = [
+  {
+    quote: "Finally a tool that doesn't charge me monthly for data I use once a week. The data quality is spot on.",
+    name: "Michael R.",
+    role: "Founder, SaaS Studio"
+  },
+  {
+    quote: "I cancelled my Sales Navigator subscription last month. ZeroSubLeads gives me the same profiles plus emails for way less.",
+    name: "Jessica T.",
+    role: "Freelance SDR"
+  },
+  {
+    quote: "The natural language search is a game changer. I just type what I want and get perfect lists.",
+    name: "David K.",
+    role: "Head of Sales, GrowFast"
+  }
+];
+---
+
+<section class="bg-white py-24">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl text-center mb-16">
+      <h2 class="text-3xl font-bold tracking-tight text-gray-900">
+        Join 450+ sellers who've ditched their subscriptions
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {testimonials.map((t) => (
+        <div class="rounded-xl bg-gray-50 p-8">
+          <p class="text-gray-700 italic mb-6">"{t.quote}"</p>
+          <div class="flex items-center gap-3">
+            <div class="h-10 w-10 rounded-full bg-primary-100 flex items-center justify-center text-primary-700 font-bold">
+              {t.name[0]}
+            </div>
+            <div>
+              <div class="font-semibold text-gray-900">{t.name}</div>
+              <div class="text-sm text-gray-500">{t.role}</div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

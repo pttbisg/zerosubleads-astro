@@ -1,0 +1,24 @@
+---
+const faqs = [
+  { q: "Where does the data come from?", a: "We aggregate data from multiple public sources and verify emails in real-time." },
+  { q: "Do I need to connect my LinkedIn account?", a: "No. You never need to connect your LinkedIn account. This keeps your account 100% safe from bans." },
+  { q: "How accurate are the emails?", a: "We only provide verified emails. If an email bounces, we refund the credit automatically." },
+  { q: "Do credits expire?", a: "Never. Your credits are yours until you use them." },
+];
+---
+
+<section id="faq" class="bg-gray-50 py-24">
+  <div class="mx-auto max-w-3xl px-6 lg:px-8">
+    <h2 class="text-3xl font-bold tracking-tight text-gray-900 text-center mb-12">
+      Frequently asked questions
+    </h2>
+    <dl class="space-y-8">
+      {faqs.map((faq) => (
+        <div class="border-b border-gray-200 pb-8">
+          <dt class="text-lg font-semibold leading-7 text-gray-900">{faq.q}</dt>
+          <dd class="mt-2 text-base leading-7 text-gray-600">{faq.a}</dd>
+        </div>
+      ))}
+    </dl>
+  </div>
+</section>
