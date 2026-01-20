@@ -1,43 +1,72 @@
-# Astro Starter Kit: Minimal
+# ZeroSubLeads
 
-```sh
-npm create astro@latest -- --template minimal
+LinkedIn leads with verified emails. Pay per lead, no subscription.
+
+## Tech Stack
+
+- **Astro 5** - Static site generation with island architecture
+- **React 19** - Interactive components (Navbar, Solution accordion)
+- **Tailwind CSS** - Styling
+- **Lucide Icons** - Icon system (astro-icon for static, lucide-react for islands)
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── astro/           # Static components (zero JS)
+│   │   ├── Hero.astro
+│   │   ├── Problem.astro
+│   │   ├── HowItWorks.astro
+│   │   ├── WhoItsFor.astro
+│   │   ├── Comparison.astro
+│   │   ├── Pricing.astro
+│   │   ├── Testimonials.astro
+│   │   ├── FAQ.astro
+│   │   ├── FinalCTA.astro
+│   │   ├── Footer.astro
+│   │   └── Button.astro
+│   └── react/           # Interactive islands
+│       ├── Navbar.tsx   # client:load
+│       ├── Solution.tsx # client:visible
+│       └── Button.tsx
+├── layouts/
+│   └── BaseLayout.astro # SEO meta tags, fonts
+├── pages/
+│   └── index.astro
+└── styles/
+    └── global.css
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Commands
 
-## 🚀 Project Structure
+| Command           | Action                                      |
+| :---------------- | :------------------------------------------ |
+| `npm install`     | Install dependencies                        |
+| `npm run dev`     | Start dev server at `localhost:4321`        |
+| `npm run build`   | Build production site to `./dist/`          |
+| `npm run preview` | Preview production build locally            |
 
-Inside of your Astro project, you'll see the following folders and files:
+## Deployment
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+Deployed on Vercel. Push to `master` triggers auto-deploy.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## To-Do
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+### SEO (Required)
 
-Any static assets, like images, can be placed in the `public/` directory.
+- [ ] **Create OG Image** - Add a 1200x630px image at `public/og-image.png` for social sharing previews
+- [ ] **Update site URL** - In `astro.config.mjs`, change `https://zerosubleads.com` to your actual domain
+- [ ] **Update robots.txt** - Change the sitemap URL in `public/robots.txt` to match your domain
 
-## 🧞 Commands
+### SEO (Optional)
 
-All commands are run from the root of the project, from a terminal:
+- [ ] Add structured data (JSON-LD) for rich snippets
+- [ ] Add Google Analytics or Plausible for tracking
+- [ ] Add `@astrojs/partytown` for third-party script optimization
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+### Features
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- [ ] Connect CTA buttons to actual signup/payment flow
+- [ ] Add privacy policy and terms pages
+- [ ] Add contact form functionality
